@@ -1,0 +1,19 @@
+{
+    "name":"require-loader",
+    "version":"0.1",
+    "homepage":"https://github.com/murvinlai/require-loaderr",
+    "author":{
+        	"name":"Murvin Lai",
+    		"email":"murvinlai@gmail.com"
+    	},
+    "scripts":{
+
+    },
+    "dependencies":{
+        
+    },
+    "devDependencies":{
+        
+    },
+    "main":"./index.js"
+}
