@@ -1,7 +1,11 @@
 var rl = require("../lib/require-loader.js");
 
+var onChange = function(err, data) {
+        console.log("call back: " + JSON.stringify(data));
+}
+
 // Set the absolute path of the directory to watch, and start initial function right away.
-var rmanager = rl.create({path:__dirname + '/loader', init:true});
+var rmanager = rl.create({path:__dirname + '/loader', init:true, onChange:onChange});
 
 // get the map
 var map = rmanager.getMap();
