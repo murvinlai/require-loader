@@ -16,6 +16,7 @@ When file is removed from the directory, it will be removed from require.cache a
 
 
 ## Installation
+    $ npm install require-loader
 
 
 ## Quick Start
