@@ -59,7 +59,7 @@ var onChange = function(err, data) {
 }
 
 // Set the absolute path of the directory to watch, and start initial function right away.
-var rmanager = rl.create({path:__dirname + '/loader', init:true, onChange:onChange});
+var rmanager = rl.create({path:__dirname + '/simple-folder', init:true, onChange:onChange});
 
 // get the map
 var map = rmanager.getMap();
