@@ -2,6 +2,9 @@ var rl = require("../lib/require-loader.js");
 
 var onChange = function(err, data) {
         console.log("call back: " + JSON.stringify(data));
+        if (data.action == 'add') {
+            data.ref.run();
+        }
 }
 
 // Set the absolute path of the directory to watch, and start initial function right away.

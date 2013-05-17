@@ -42,7 +42,7 @@ var options = {
     path    :   String,     /* The full path of the directory you want to watch, default to './' */
     init    :   Boolean,    /* To run an initial load from the directory or not, default to false */
     isWatch :   Boolean,    /* To watch the directory or not.  Default to true */
-    onChange:   function(){}    /* Call when any module is added or removed */
+    onChange:   function(err, data){}    /* Call when any module is added or removed.  It will data as: {action:String, filename:String, resolve_name:String, ref:Object   }, action is either "add" or "remove", ref is the required Module just added. */
 }
 ```
 
@@ -53,6 +53,9 @@ var rl = require("../lib/require-loader.js");
 
 var onChange = function(err, data) {
         console.log("call back: " + JSON.stringify(data));
+        if (data.action == 'add') {
+            data.ref.run();
+        }
 }
 
 // Set the absolute path of the directory to watch, and start initial function right away.
