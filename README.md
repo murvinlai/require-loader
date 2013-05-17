@@ -21,6 +21,17 @@ When file is removed from the directory, it will be removed from require.cache a
 
 ## Quick Start
 
+Assume you have a folder 'loader' you want to watch for adding/removing module, and you already have /loader/test-1.js , in your test.js file, you can:
+
+
+```js
+/* test-.js */
+var rl = require("require-loader").create({path:__dirname + '/loader', init:true});
+
+var t1 = rl.getMap()['test-1.js'];
+t1.run(); // assume run() is export from test-1.js
+
+```
 
 ## Features & Options
 
