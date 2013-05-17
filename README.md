@@ -1,13 +1,31 @@
 require-loader
 ==============
 
-Dynamically add (require) / delete the modules from specified directory.   [require-loader] is local to the module. 
+Watch the specified directory and dynamically add/remove module when there is any change.   [require-loader] is local to the module. 
 
 
 -------------
 
 
-It is for requiring some files from a directory.  If there is a change in the directory, such as adding or removing file,
-then it will require the new file or remove it from require.cache.
+## Purpose
+To allow dynamically add / remove module in a simple way. 
+When new file is put into the directory, it uses "require()" to add module as usual, and it can be referenced in the [require-loader] map. 
+When file is removed from the directory, it will be removed from require.cache and the [require-loader] map. 
 
-I try to keep it as simple and as less dependent as possible.
+[require-loader] is local to the module implementing it.  Therefore you can set up require-loader in 'test-a.js' and 'test-b.js' watching on different directories, and not interferring each other.
+
+
+## Installation
+
+
+## Quick Start
+
+
+## Features & Options
+
+
+
+## Use cases
+
+
+
