@@ -78,7 +78,7 @@ t1.run();
 
 ## Use cases
 
-One of the use cases is the for loading multiple configs for different domains from a directory. 
+One of the use cases is for loading multiple configs for different domains from a directory. 
 See test example "hosts.js". It uses express.js and load different website "app" from the hosts-loader folder.
 
 ```js
