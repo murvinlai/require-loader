@@ -78,5 +78,27 @@ t1.run();
 
 ## Use cases
 
+One of the use cases is the for loading multiple configs for different domains from a directory. 
+See test example "hosts.js". It uses express.js and load different website "app" from the hosts-loader folder.
 
+```js
+var express = require('express');
+var app = express();
+var RL = require("require-loader");
 
+var onDomainChange = function(err, data) {
+    if (data.action == 'add') {
+        // data.ref is the reference of the app object.
+        app.use(express.vhost(data.ref.domain, data.ref.app));
+    } 
+}
+
+// uses require-loader to watch hosts-loader folder and load the different apps to the main app server. 
+var reqLoader = RL.create({path:__dirname + '/hosts-loader', init:true, isWatch:true, onChange:onDomainChange});
+
+// testing for output.
+var host1 = reqLoader.getMap()['host1.js'];
+host1.output();
+
+app.listen(3000);
+```
