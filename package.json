@@ -1,9 +1,12 @@
 {
     "name":"require-loader",
-    "version":"0.1",
+    "version":"0.1.0",
     "description":"Add/Remove module dynamically when there is change in the specified directory",
     "homepage":"https://github.com/murvinlai/require-loader",
-    "author": "Murvin Lai <murvinlai@gmail.com>"
+    "author": {
+        name:   "Murvin Lai",
+        email:  "murvinlai@gmail.com"
+    },
     "scripts":{
 
     },
