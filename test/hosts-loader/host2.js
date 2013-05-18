@@ -8,5 +8,6 @@ app.all('/', function(req, res){
     res.redirect('/home.html');    
 })
 
+module.exports.output = function() { console.log("host2"); };
 module.exports.domain = 'require-loader-test-host2.com';
 module.exports.app = app;
