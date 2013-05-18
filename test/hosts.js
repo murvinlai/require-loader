@@ -1,5 +1,10 @@
 /*
  Demonstrate how it can help for handling multiple DNS(domains) dynamically with the help of require-loader.
+ 
+ To run this example, you have to change the host file for the domains:
+ 127.0.0.1 require-loader-test-host1.com
+ 127.0.0.1 require-loader-test-host2.com
+ 127.0.0.1 require-loader-test-host3.com
 */
 var express = require('express');
 var app = express();

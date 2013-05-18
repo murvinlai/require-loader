@@ -8,5 +8,5 @@ app.all('/', function(req, res){
     res.redirect('/home.html');    
 })
 
-module.exports.domain = 'require-loader-test-host1.com';
+module.exports.domain = 'require-loader-test-host1.com'; 
 module.exports.app = app;
